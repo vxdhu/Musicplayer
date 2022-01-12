@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+.mainbody {
+    font-family: 'Hammersmith One', sans-serif;
+    height: 100%;
+    background: radial-gradient(ellipse at center, #f6cb6c 0%, #f3c65d 0%, #f2ae54 100%);
+    position: relative;
+    min-height: 648px;
+}
+
+.fullnav {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.brandwrap img {
+    width: 150px;
+}
+
+ul {
+    display: flex;
+}
+
+li a {
+    padding: 0 1em;
+    text-decoration: none;
+    color: white;
+}
+
+li a:hover {
+    color: #1ED760;
+}
+
+li {
+    list-style-type: none;
+}
+
+.sec1 {
+    height: 100%;
+}
+
+.maincontent {
+    min-height: 640px;
+    display: flex;
+    color: white;
+    width: 60%;
+    text-align: center;
+    margin: auto auto;
+    /* margin-top: 60px; */
+    font-size: 3.2rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.maincontent a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border: 2px solid #1DB954;
+    background-color: #1DB954;
+    border-radius: 2em;
+    padding: 1em 4em;
+    transition: all .1s ease-in;
+}
+
+.maincontent a:hover {
+    background-color: #1ED760;
+    border: 2px solid #1ED760
+}
+
+
+/* Music Player */
+
+h2 {
+    font-size: 1rem;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: .75rem;
+}
+
+.musicContainer {
+    width: 100vw;
+    height: 80px;
+    background: #ECE9E6;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    padding: 20px 10px;
+}
+
+.musicbar {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: space-around;
+}
+
+.seperator {
+    display: flex;
+    align-items: center;
+    width: 50%
+}
+
+.songdesc {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#cover {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 2rem;
+    border-radius: 50%;
+    animation: rotate 5s linear infinite;
+    animation-play-state: paused;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.musicContainer.play #cover {
+    animation-play-state: running;
+}
+
+.btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    padding: 0 2rem;
+    color: grey;
+    cursor: pointer;
+    transition: .1s ease-in;
+}
+
+.btn-big {
+    font-size: 1.25rem;
+}
+
+.btn:hover {
+    color: black;
+}
